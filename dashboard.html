@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+    <head>
+        <title>GE Healthcare</title>
+        <style>
+            body {font-family: "Lato", sans-serif;}
+
+            ul.tab {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                border: 1px solid #ccc;
+                background-color: #f1f1f1;
+            }
+
+            /* Float the list items side by side */
+            ul.tab li {float: left;}
+
+            /* Style the links inside the list items */
+            ul.tab li a {
+                display: inline-block;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                transition: 0.3s;
+                font-size: 17px;
+            }
+
+            /* Change background color of links on hover */
+            ul.tab li a:hover {
+                background-color: #ddd;
+            }
+
+            /* Create an active/current tablink class */
+            ul.tab li a:focus, .active {
+                background-color: #ccc;
+            }
+
+            /* Style the tab content */
+            .tabcontent {
+                display: none;
+                padding: 6px 12px;
+                border: 1px solid #ccc;
+                border-top: none;
+            }
+        </style>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+        <link rel="icon" href="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/components/brandkit/favicon/favicon.ico">
+
+        <link id="theme-styles" href="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/css/hds.css" rel="stylesheet" type="text/css">
+        <link id="theme-styles-responsive" href="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/css/responsive.css" rel="stylesheet" type="text/css">
+
+        <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ge-bootstrap" src="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/components/ge-bootstrap/js/ge-bootstrap.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="navbar-offcanvas" src="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/components/navbar-offcanvas/js/navbar-offcanvas.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="sticky-dropdown" src="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/components/navbar-offcanvas/js/sticky-dropdown.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bootstrap/affix" src="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/components/bootstrap/js/affix.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bootstrap/alert" src="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/components/bootstrap/js/alert.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bootstrap/button" src="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/components/bootstrap/js/button.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bootstrap/scrollspy" src="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/components/bootstrap/js/scrollspy.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bootstrap/tab" src="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/components/bootstrap/js/tab.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bootstrap/tooltip" src="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/components/bootstrap/js/tooltip.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bootstrap/transition" src="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/components/bootstrap/js/transition.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bootstrap/dropdown" src="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/components/bootstrap/js/dropdown.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ge-bootstrap/accordion" src="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/components/ge-bootstrap/js/ge-bootstrap/accordion.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ge-bootstrap/placeholder" src="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/components/ge-bootstrap/js/ge-bootstrap/placeholder.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="ge-bootstrap/modal" src="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/components/ge-bootstrap/js/ge-bootstrap/modal.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bootstrap/popover" src="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/components/bootstrap/js/popover.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bootstrap/modal" src="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/components/bootstrap/js/modal.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bootstrap/carousel" src="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/components/bootstrap/js/carousel.js"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="bootstrap/collapse" src="https://gehcbiartifactsdev.blob.core.windows.net/web-assets/static-resources/7/hdx/components/bootstrap/js/collapse.js"></script>
+
+    </head>
+    <body>
+
+    <div class="masthead navbar-inner" style="background-color: #333;">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand"><span class="ge-logo">General Electric</span> <span>Security Dashboard</span></a>
+            </div>
+        </div>
+    </div>
+
+
+    <ul class="tab">
+        <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Fortify')" id="defaultOpen">Fortify</a></li>
+        <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'Nessus')">Nessus</a></li>
+        <li><a href="javascript:void(0)" class="tablinks" onclick="openCity(event, 'WebInspect')">WebInspect</a></li>
+    </ul>
+
+    <div id="Fortify" class="tabcontent">
+        <h3>Fortify</h3>
+        <p>Analyze the source code of an application for security issues</p>
+    </div>
+
+    <div id="Nessus" class="tabcontent">
+        <h3>Nessus</h3>
+        <p>Vulnerability scanning platform for Scanning & Auditing of Virtualized & Cloud Platforms</p>
+    </div>
+
+    <div id="WebInspect" class="tabcontent">
+        <h3>WebInspect</h3>
+        <p>Web application security assessment tool that helps identify known and unknown vulnerabilities within the Web application layer</p>
+    </div>
+
+    <iframe src="fortify.html" height="500" width="1270" id="fortifyiframe"></iframe>
+    <iframe src="nessus.html" height="500" width="1270" style="display:none;" id="nessusiframe"></iframe>
+    <iframe src="webinspect.html" height="500" width="1270" style="display:none;" id="webinspectiframe"></iframe>
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+
+//            console.log("making it visible...")
+//        document.getElementById("MyIframe").style.display = "visible";
+
+
+            var iframe = document.getElementById(cityName.toLowerCase()+"iframe");
+//            console.log(iframe);
+            iframe.style.display="block";
+
+            console.log("cityName == " + cityName);
+
+            if(cityName == "Fortify")
+            {
+                var iframe = document.getElementById("nessusiframe");
+//                console.log(iframe);
+                iframe.style.display="none";
+
+                var iframe = document.getElementById("webinspectiframe");
+//                console.log(iframe);
+                iframe.style.display="none";
+            }
+            else if(cityName == "Nessus")
+            {
+                var iframe = document.getElementById("fortifyiframe");
+//                console.log(iframe);
+                iframe.style.display="none";
+
+                var iframe = document.getElementById("webinspectiframe");
+//                console.log(iframe);
+                iframe.style.display="none";
+            }
+            else {
+                var iframe = document.getElementById("nessusiframe");
+//                console.log(iframe);
+                iframe.style.display="none";
+
+                var iframe = document.getElementById("fortifyiframe");
+//                console.log(iframe);
+                iframe.style.display="none";
+            }
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click()
+    </script>
+
+    </body>
+
+</html>
+
